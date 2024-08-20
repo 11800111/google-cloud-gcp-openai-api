@@ -302,7 +302,7 @@ async def chat_completions(body: ChatBody, request: Request):
 
     # Wrapper around Vertex AI large language models
     llm = ChatVertexAI(
-        model_name=model_name,
+        model_name='claude-3.5-sonnet',
         temperature=temperature,
         top_k=top_k,
         top_p=top_p,
