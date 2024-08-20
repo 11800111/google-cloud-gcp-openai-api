@@ -306,6 +306,7 @@ async def chat_completions(body: ChatBody, request: Request):
         temperature=temperature,
         top_k=top_k,
         top_p=top_p,
+        location='europe-west1',
         max_output_tokens=max_output_tokens
     )
 
