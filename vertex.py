@@ -35,7 +35,7 @@ from google.cloud import aiplatform
 
 # LangChain
 import langchain
-from langchain_community.chat_models import ChatVertexAI
+from langchain_google_vertexai.chat_models import ChatVertexAI
 from langchain.chains import ConversationChain
 from langchain.memory import ConversationBufferMemory
 
