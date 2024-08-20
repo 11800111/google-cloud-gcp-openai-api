@@ -49,7 +49,7 @@ debug = os.environ.get("DEBUG", False)
 print(f"Endpoint: http://{host}:{port}/")
 # Google Cloud
 project = os.environ.get("GOOGLE_CLOUD_PROJECT_ID", project_id)
-location = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
+location = os.environ.get("GOOGLE_CLOUD_LOCATION", "europe-west1")
 print(f"Google Cloud project identifier: {project}")
 print(f"Google Cloud location: {location}")
 # LLM chat model name to use
@@ -302,7 +302,7 @@ async def chat_completions(body: ChatBody, request: Request):
 
     # Wrapper around Vertex AI large language models
     llm = ChatVertexAI(
-        model_name='claude-3.5-sonnet',
+        model_name='claude-3-5-sonnet@20240620',
         temperature=temperature,
         top_k=top_k,
         top_p=top_p,
